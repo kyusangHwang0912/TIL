@@ -1,0 +1,17 @@
+# 상황 - ppt 관련 파일 2개 / 리포트 관련 파일 1개 
+touch report.hwp
+touch ppt.pptx
+touch ppt.pdf
+# 리포트 버전 기록
+git add report.hwp
+git status
+git commit -m '리포트 작업'
+git log
+git status
+----------------------------------
+# 발표자료 버전 기록
+git add .
+git status
+git commit -m '발표자료 작업'
+git log 
+git status
