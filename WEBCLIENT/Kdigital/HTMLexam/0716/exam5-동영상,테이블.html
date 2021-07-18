@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>동영상,테이블</title>
+</head>
+<body>
+    <h1>동영상과 테이블</h1>
+    <hr>
+    <h2>동영상을 출력해 보자</h2>
+    <video src="../../images/trailer.mp4", width="500", height="400" controls="controls"></video>
+    <!-- controls 는 조절기! 재생버튼 그런것들-->
+    <!-- iframe 태그로 유튜브 동영상이나 그런거 끌어올 수 있는 태그가 있다고 한다. 확인해보자 -->
+    <hr>
+    <h2>테이블 - 예시</h2>
+    <table style="width:100%" border="1">
+        <tr> <!--행-->
+            <th>Firstname</th> <!--th는 제목 열 태그 굵은체-->
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>80</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>테이블 - 실습</h2>
+    <table border="1"> <!-- border 설정마다 테이블 겉표지?의 종류가 달라진다-->
+                       <!-- 디자인의 다양성을 추구하려면 CSS 이용해야-->
+        <tr><th>언어 또는 기술명</th>
+            <th>주요기능</th>
+        </tr>
+        <tr><td>HTML</td><td>웹 페이지의 내용 또는 구조를 만드는 언어입니다.</td></tr>
+        <tr><td>CSS</td><td>웹 페이지 내용의 스타일을 정의하는 언어입니다.</td></tr>
+        <tr><td>JavaScript</td><td>웹 페이지에서의 클라이언트상에서의 기능을 구현하는 언어입니다.</td></tr>
+        <tr><td>Django</td><td>웹 페이지에서의 서버상에서의 기능을 구현하는 기술입니다. (python)</td></tr>
+    </table>
+</body>
+</html>
