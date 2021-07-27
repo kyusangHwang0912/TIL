@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>DOM 프로그래밍 - 표준이벤트 모델</h1>
+<hr>
+<button>제목변경</button>
+<button>제목칼라변경</button>
+<button>이미지변경</button><br>
+<img src="../../images/1.jpg" width="200">
+
+<script>
+function updateTitle() {
+    var dom = document.getElementsByTagName("h1")[0];
+    var msg = window.prompt("제목을 입력하세요");
+    dom.textContent = msg;
+}
+function updateColor() {
+    var dom = document.getElementsByTagName("h1")[0];
+    var randomValue = Math.random();
+    var colorCode = '#'+Math.round(Math.random() * 0xffffff).toString(16);
+    console.log(colorCode);
+    dom.style.color = colorCode;
+}
+function updateImage() {
+    var dom = document.getElementsByTagName("img")[0];
+    var randomValue = Math.random();
+    var imageName = Math.floor(randomValue * 10) + 1;
+    dom.src = "../../images/"+imageName+".jpg";
+}
+
+var doms = document.getElementsByTagName("button");
+doms[0].addEventListener("click", updateTitle)  //click on 안되고, updateTitle()도 안됨. 이름만을 전달하는 것!
+doms[1].addEventListener("click", updateColor)
+doms[2].addEventListener("click", updateImage)
+</script>
+</body>
+</html>

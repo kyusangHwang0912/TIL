@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>자바스크립트 변수의 종류</h2>
+<hr>
+<script src="util.js"></script>
+<script>
+var num1 = 100;
+let num2 = 200; // let으로 변수를 만들면 똑같은 이름의 변수를 또 선언하는 것을 허용하지 않는다. (에러발생)(대입은 변수선언이 아니기 때문에 가능함)
+const num3 = 300; // 고정값! 대입으로 바꾸는 것도 허용x
+writeColor("num1 : " + num1, "h1", "red");
+writeColor("num2 : " + num2, "h1", "green");
+writeColor("num3 : " + num3, "h1", "blue");
+hr()
+num1 = '가'; //이미 만들어져 있는 num1 변수에다가 값만 바꾸는 것 (변수를 만들었다고 하지 않음)
+num2 = '나'; //변수선언이 아니기 때문에 값을 바꾸는 것은 가능!
+//num3 = '다'; -> const로 선언한 고정값이기 때문에 에러발생
+writeColor("num1 : " + num1, "h2", "red");
+writeColor("num2 : " + num2, "h2", "green");
+writeColor("num3 : " + num3, "h2", "blue");
+hr()
+var num1 = 3.5;
+//let num2 = 4.7; //변수선언이 에러가 나면 훑을때 에러가 난 것이기 때문에, 페이지에 <h2>와<hr>밖에 출력되지 않음.(<script>내용 아예 배제)
+//const num3 = 5.3; // 위와 같은 결과
+writeColor("num1 : " + num1, "h3", "red");
+writeColor("num2 : " + num2, "h3", "green");
+writeColor("num3 : " + num3, "h3", "blue");
+</script>
+</body>
+</html>
+
+
+
+
+
+

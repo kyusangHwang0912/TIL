@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>DOM 프로그래밍</h1>
+<hr>
+<button onclick="updateTitle();">제목변경</button>
+<button onclick="updateColor();">제목칼라변경</button>
+<button onclick="updateImage();">이미지변경</button><br>
+<img src="../../images/1.jpg" width="200">
+
+<script>
+function updateTitle() {
+    var dom = document.getElementsByTagName("h1")[0];
+    var msg = window.prompt("제목을 입력하세요");
+    dom.textContent = msg;
+}
+
+function updateColor() {
+    var dom = document.getElementsByTagName("h1")[0];
+    var randomValue = Math.random();
+    var colorCode = '#'+Math.round(Math.random() * 0xffffff).toString(16);
+    console.log(colorCode);
+    dom.style.color = colorCode;// color는 style의 속성명
+    //dom.style.backgroundColor = colorCode;// js에서 - 는 규칙에 위배되서 쓰지 못한다. 따라서 -를 빼고 다음문자를 대문자로 써라라는 규칙을 정함
+}
+
+function updateImage() {
+    var dom = document.getElementsByTagName("img")[0];
+    var randomValue = Math.random();
+    var imageName = Math.floor(randomValue * 10) + 1;
+    dom.src = "../../images/"+imageName+".jpg";
+}
+</script>
+</body>
+</html>

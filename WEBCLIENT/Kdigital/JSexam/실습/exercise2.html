@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var rand = Math.random();
+        console.log(rand);
+        console.log(rand*4);
+        console.log(Math.floor(rand*4));
+        var num = Math.floor(rand*4)
+        function go(url) {
+            var answer = window.confirm("정말 이동하시겠습니까?");
+            if (answer)
+                location.href = url;
+            else
+                location.href = 'http://localhost:63342/WEBCLIENT_Kdigital/HTML&CSSexam/0716/first.html?_ijt=st78p1plfsbv6d3tddbe41d4a9';
+            }
+        if (num==1){
+            go('http://www.daum.net');
+        }
+        if (num==2){
+            go('http://www.naver.com');
+        }
+        else {
+            go('http://www.google.co.kr')
+        }
+        
+
+    </script>
+
+</body>
+</html>

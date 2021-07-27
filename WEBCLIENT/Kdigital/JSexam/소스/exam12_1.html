@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id="dooly">DOM 프로그래밍 - 인라인 이벤트 모델</h1>
+<hr>
+<button onclick="updateTitle();">제목변경</button>
+<button onclick="updateColor();">제목칼라변경</button>
+<!--<button onclick="updateImage();">이미지변경</button><br>-->
+<button onmouseover="updateImage();">이미지변경</button> <!-- 마우스가 올라가기만 하면 실행시키는 명령어 --><!--pdf 70페이지 참고-->
+<img id="duke" src="../../images/1.jpg" width="200"> 
+
+<script>
+function updateTitle() {
+    var dom = document.getElementById("dooly"); //위에서 id를 썼으므로 getElementByID를 썼음.
+    var msg = window.prompt("제목을 입력하세요");
+    dom.textContent = msg;
+}
+function updateColor() {
+     var dom = document.getElementById("dooly");
+     //var dom = document.querySelector("#dooly");도 같은 결과
+    var randomValue = Math.random();
+    var colorCode = '#'+Math.round(Math.random() * 0xffffff).toString(16);
+    console.log(colorCode);
+    dom.style.color = colorCode;
+}
+function updateImage() {
+     var dom = document.getElementById("duke");
+    var randomValue = Math.random();
+    var imageName = Math.floor(randomValue * 10) + 1;
+    dom.src = "../../images/"+imageName+".jpg";
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	span { color : red; }
+</style>
+</head>
+<body>
+<h1>자바스크립트의 연산자(2)</h1>
+<hr>
+<pre>
+<!--  세번 반복  -->
+<script>
+/*
+1) traditonal For
+         for(초기식;조건식;증감식)
+             반복명령들
+         -> 반복횟수를 정해놓고 반복할 때 주로 사용
+         -> 변수값을 정해진 룰대로 변화시키면서 반복할때 주로 사용
+2) for each 문
+         for(변수선언 in 배열 또는 객체)
+              반복명령들
+*/
+	for(var su=1; su < 4 ; su++ ) {
+		var num=window.prompt("채크하려는 숫자를 입력해 주세요.");
+		if (num != null)
+		    num = num.trim()
+		if(isNaN(num) || num == '' || num == null ) {
+			document.writeln("<span>숫자</span>를 입력해 주세요!!!");
+		} else {
+			num % 2 == 0 && document.writeln(num+"는 짝수");
+			num % 2 == 0 || document.writeln(num+"는 홀수");
+		}
+	}
+</script>
+</pre>
+</body>
+</html>
+

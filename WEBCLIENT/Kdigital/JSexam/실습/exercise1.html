@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script src="util.js"></script>
+    <script>
+        var ary = [10,5,7,21,4,8,18];
+        var f1 = function (ary) {
+            var result = 0;
+            for (var i in ary) {
+                result += ary[i];
+            }
+            return result;
+        };
+        var sum = f1(ary);
+        writeColor("모든 원소의 합 :"+sum,"h2","red");
+        var sort = ary.sort(function(a, b){ return a-b;});
+        var max = sort[ary.length-1];
+        var min = sort[0];
+        writeColor("최대값 :"+max,"h3","green")
+        writeColor("최솟값 :"+min,"h4","blue")
+
+
+    </script>
+</body>
+</html>

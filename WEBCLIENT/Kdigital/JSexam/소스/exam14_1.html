@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>시간정보 출력하기</h1>
+<hr>
+<button onclick="startTime()">시간을 알려주라옹...</button>
+<button onclick="stopTime()">시간 출력을 종료하라옹...</button>
+<output></output>
+<script>
+var target = document.getElementsByTagName("output")[0];
+var interval_id;//함수안에서 만든 변수는 함수 안에서만 쓸 수 있기 때문에 전역변수로 일단 선언(stopTime에서도 써야됨)
+function startTime() {
+    if (target.innerHTML) {
+        window.alert("그만 클릭하라옹... 이미 시간 출력하고 있음!!");
+    } else {
+        interval_id = window.setInterval(function () {//동적인 기능 쉽게 지원해주는 함수 setInterval!
+	        var d = new Date();
+	        target.innerHTML = "<h2>"+d.toLocaleString()+"</h2>";
+	    }, 1000);//1000은 1000millisecond = 1초
+	}
+}
+function stopTime() {
+	target.innerHTML = "";
+	window.clearInterval(interval_id)
+}
+</script>
+</body>
+</html>

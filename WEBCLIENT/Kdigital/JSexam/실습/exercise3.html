@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        button:nth-of-type(1) {
+	color : red;
+	font-size : 1.5em;
+        }
+        button:nth-of-type(2) {
+	color : blue;
+	font-size : 1.5em;
+        }
+        button:nth-of-type(3) {
+	color : green;
+	font-size : 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="writedate('red')">빨강색</button>
+    <button onclick="writedate2('blue')">파랑색</button>
+    <button onclick="writedate('green')">녹색</button>
+    <hr>
+    <h2></h2>
+
+    <script>
+        var dom = document.getElementsByTagName("h2")[0];
+		function writedate(color) {
+		    var date = new Date(); // 누르는 날짜마다 date가 달라지게!
+            dom.innerHTML = "오늘은 "+date.getFullYear()+"년 "+(date.getMonth()+1)+"월 "+date.getDate()+"일입니다."; //month는 +1해줘야하고, day(요일)가 아니라 date
+            dom.style.color = color;
+        }
+        function writedate2(color) {
+            var date = new Date();
+            dom.innerHTML = date.toLocaleString();
+            dom.style.color = color;
+        }
+    </script>
+</body>
+</html>
+

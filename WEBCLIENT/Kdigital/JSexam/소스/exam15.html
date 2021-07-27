@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>DOM 프로그래밍</h1>
+<hr>
+<button onclick="go('http://www.naver.com/');">네이버로가자</button>
+<button onclick="go('http://www.daum.net');">다음으로가자</button>
+<button onclick="go('http://www.google.com');">구글로가자</button><br>
+
+<script>
+function go(url) {
+    var answer = window.confirm("정말 갈겨?");
+    if (answer) // 수행문장이 하나일때는 중괄호 안주어도 된다.(줘도됨) 2개이상일 때는 무조건 넣어줘야됨!(만약 location 아래 console.log(url)이 있으면 있어야됨)
+        location.href = url;//a태그아닌 방법으로 다른 링크 가고 싶을 때는 이렇게 location 내장객체를 사용할 수 있음
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>배열 생성과 활용</h1>
+<hr>
+<script>
+var a1 = [ ];
+document.write("<h3>"+ a1.length +"</h3>");
+document.write("<h3>"+ a1[0] +"</h3>");
+document.write("<hr>");
+a1[4] = 100;
+document.write("<h3>"+ a1.length +"</h3>");
+for(var i=0; i < a1.length; i++)
+	document.write("<h4>"+ a1[i] +"</h4>");
+document.write("<hr>");
+for(var i in a1) // undefined 무시, 아닌애들만 꺼내서 출력(인덱스를 넣어줌 = 4)
+	document.write("<h4>"+ a1[i] +"</h4>");
+document.write("<hr>");
+var a2 = [10, '가나다', true, 3.5];
+for(var i in a2)  // for data in array: (파이썬예시, 다른점은 js는 인덱스를 담는다!)
+	document.write("<h4>"+ typeof a2[i] + ":" + a2[i] +"</h4>");
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

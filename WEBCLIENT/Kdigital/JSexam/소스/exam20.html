@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>자바스크립트 변수의 스코프</h2>
+<hr>
+<script src="util.js"></script> 
+<script>
+var g_v = 100; //전역scope(전역변수)
+function scopeTest() {
+	var l_v = 1000; //함수안에 선언된 변수는 지역변수!(지역scope)
+	writeNewLine("scopeTest() l_v : " + l_v);
+	writeNewLine("scopeTest() g_v : " + g_v );
+}
+scopeTest();
+
+// try,except 구문 같은 것
+try {
+	writeNewLine("l_v : " + l_v  );
+} catch(e) { //발생한 에러를 캐치
+	writeNewLine(e);
+}
+writeNewLine("g_v : " + g_v );
+</script>
+</body>
+</html>
+
+
+
+
+
+
