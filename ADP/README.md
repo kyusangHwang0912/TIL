@@ -10,7 +10,7 @@ https://github.com/bluemumin/ADP_certificate_preperation
 
 https://shiningyouandme.tistory.com/
 
-+ 각종 skit-learn 사이트
+& 각종 skit-learn 사이트
 
 - 강의
 
